@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr, amsmath, amssymb, amsfonts, tikz, amsthm, tkz-tab}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\today}
+\chead{Solution proposée}
+\lhead{Ahmed Chaïbi}
+\rfoot{Page numéro \thepage}
+\newcommand{\angorio}[2]{\widehat{(\overrightarrow{#1}, \overrightarrow{#2})}}
+\newtheorem*{theorem}{Théorème}
+\begin{document}
+	\renewcommand{\abstractname}{Remarque}
+\begin{abstract}
+	Par souci de simplification $f(AB)$ désigne l'image de la droite $(AB)$ par $f$ pour laquelle la notation $f\Big((AB)\Big)$ s'avère trop lourde à l'usage.
+\end{abstract}
+\subsection*{Exercice 2.}
+\begin{enumerate}
+	\item \begin{enumerate}[label=(\alph*)]
+		\item $ f(A)=B$ et $ f(B)=C $ donc $f$ est d'angle $\theta\equiv\angorio{AB}{BC}\pmod{2\pi}$.
+		\begin{align*}
+			\theta & \equiv-\angorio{BC}{AB}\pmod{2\pi}\\
+			&\equiv -(\angorio{BC}{BA}+\pi)\pmod{2\pi}\\
+			&\equiv -(\frac{\pi}{2}+\pi)\pmod{2\pi}\\
+			&\equiv \frac{\pi}{2}\pmod{2\pi}.
+		\end{align*} \\
+		et elle est de rapport $\frac{CB}{AB}=\frac{4}{3}\neq1$ et par suite elle admet un unique point invariant.
+		\item $f$ est d'angle $\frac{\pi}{2}$ donc l'image d'une droite par $f$ est une droite qui lui est perpendiculaire.
+		
+		On a $B\in(BH)$ et $f(B)=C$ donc $C\in f(BH)$ de plus $f(BH)\perp(BH)$ donc $\underline{f(BH)=(AC)}$.
+		
+		De même, $A\in(AH)$ et $f(A)=B$ donc $B\in f(AH)$ de plus $f(AH)\perp(AH)$ donc $\underline{f(AH)=(BH)}$.
+		
+		Maintenant, $\{H\}=(AH)\cap(BH)$ et $f(AH)=(BH); f(BH)=(AH)$ alors,
+		\begin{align*}
+			\{f(H)\}&=(BH)\cap(AH)\\
+			&=\{H\}\\
+			f(H)&=H.
+		\end{align*}
+		Ainsi, $H$ est le centre de $f$.
+	\end{enumerate}
+	\item \begin{enumerate}[label=(\alph*)]
+		\item On a $C\in(AC), f(C)=D$ et $f(AH)=(BH)$ par suite $D\in(BH)$.\\
+		\item On a, encore, $\angorio{BC}{BA}\equiv\frac{\pi}{2}\pmod{2\pi}$, $f(A)=B, f(B)=C$ et $f(C)=D$ donc $\angorio{CD}{CB}\equiv\frac{\pi}{2}\pmod{2\pi}$ de plus $D\in(BH)$ d'où la construction de $D$.
+	\end{enumerate}
+	\item \begin{enumerate}[label=(\alph*)]
+		\item $g(A)=B$ et $g(B)=C$ donc $g$ est une similitude directe de rapport $\frac{CB}{AB}=\frac{4}{3}$ et par suite $g^{-1}$ est une similitude indirecte de rapport $\frac{3}{4}$ et comme $f$ est une similitude directe de rapport $\frac{4}{3}$, $f\circ g^{-1}$ est une similitude indirecte de rapport $\frac{4}{3}\cdot\frac{3}{4}=1$ c'est-à-dire $f\circ g^{-1}$ est un antidéplacement.
+
+
+		$g(A)=B$ donc $g^{-1}(B)=A$ et $f(A)=B$ donc $f\circ g^{-1}(B)=B$. De même $g(B)=C$ donc $g^{-1}(C)=B$ et $f(B)=C$ donc $f\circ g^{-1}(C)=C$. Dès lors, $f\circ g^{-1}$ est un antidéplacement qui fixe $A$ et $B$ et $f\circ g^{-1}=S_{(BC)}$. 
+		\item \begin{align*}
+			E&=g(C)\\
+			g^{-1}(E)&=C\\
+			f\circ g^{-1}(E)&=f(C)\\
+			S_{(BC)}(E)&=D.
+		\end{align*}
+		\end{enumerate}
+	\item $g$ est une similitude indirecte de centre $\Omega$ donc $g\circ g$ est une homothétie du même centre.
+		
+		$g(A)=B$ et $g(B)=C$ donc $g\circ g(A)=C$ et $\Omega\in(AC)$.
+		De même, $g(B)=C$ et $g(C)=E$ donc $g\circ g(B)=E$ et $\Omega\in(BE)$.
+		Ainsi $\Omega\in(AC)\cap(BE)$.
+\end{enumerate}
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[scale=0.8]
+	\draw (-2,0) node[below left]{$B$} -- (2,0) node[right]{$C$} -- (-2,3) node[above right]{$A$} -- (-2,0);
+	\draw (-1.8,0) -- (-1.8, 0.2) -- (-2, 0.2);
+	\draw (0,0) node[below right]{$4$};
+	\draw (-2,1.5) node[below left]{$3$};
+	\draw (2, -5.33) -- (2, 5.33);
+	\draw (-2, 0) -- (2, 5.33) node[above right]{$D$};
+	\draw (-7.146, 6.8595) -- (2, -5.33) node[below right]{$E$};
+	\draw (-2,3) -- (-7.146, 6.8595) node[above, red]{$\Omega$};
+	\draw (-0.56,1.921) node[above]{$H$};
+	\draw[red] (-7.146, 6.8595) -- (2, -2.665);
+	\end{tikzpicture}
+	\caption{Construction.}
+\end{figure}  
+\subsection*{Exercice 4.}
+\subsubsection*{Partie A.}
+\begin{enumerate}
+	\item $f$ est dérivable sur $]-1,+\infty[$ et $f'(x)=1-\frac{1}{x+1}=\frac{x}{x+1}, \;\forall_{x\in]-1,+\infty[}$.
+	\begin{align*}
+		\lim_{\substack{x\to-1 \\ x>-1}}f(x)&=\lim_{\substack{x\to-1 \\ x>-1}}x-\ln(x+1)\\
+		&=+\infty.\\
+		\lim_{x\to+\infty}f(x)&=\lim_{x\to+\infty}x-\ln(x+1)\\
+		&=\lim_{x\to+\infty}x\Big(1-\frac{x+1}{x}\cdot\frac{\ln(x+1)}{x+1}\Big)\\
+		&=+\infty.
+		\lim_{x\to+\infty}\frac{f(x)}{x}&=\lim_{x\to+\infty}\frac{x-\ln x}{x}\\
+		&=\lim_{x\to+\infty}1-\frac{\ln x}{x}\\
+		&=1\\
+		\lim_{x\to+\infty}f(x)-x&=\lim_{x\to+\infty}x-\ln(x+1)-x\\
+		&=\lim_{x\to+\infty}-\ln(x+1)\\
+		&=-\infty.
+	\end{align*}
+	Ainsi $\mathcal{C}_f$ admet en $+\infty$ une branche parabolique de direction $\Delta:y=x$. 
+	\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+	\tkzTabSetup[doubledistance = 2pt]
+	\tkzTabInit{$x$ / 0.5 , $x+1$ / 0.75 , $x$ / 0.75, $f'(x)$ / 1, $f$ / 2}{$-1$, $0$, $+\infty$}
+	\tkzTabLine{z, , +, , }
+	\tkzTabLine{ , - , z , + ,}
+	\tkzTabLine{d, -, z, + ,}
+	\tkzTabVar{+C / $+\infty$ , - / $0$ , +C / $+\infty$ }
+	\end{tikzpicture}
+	\caption{Tableau de variation de la fonction $f$.}
+	\end{figure}
+	\item $f$ admet $0$ comme minimum absolu donc, pour tout $x$ de $]-1,+\infty[$
+	\begin{align*}
+		f(x)&\geq0\\
+		x-\ln(x+1)&\geq0\\
+		\ln(x+1)&\leq x.
+	\end{align*}
+	\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}
+	\draw[->, brown] (0,0) -- (1,0) node[above] {$\vec{i}$};
+	\draw[->, brown] (0,0) -- (0,1) node[left] {$\vec{j}$};
+	\draw (2.7182818, -0.1) node[below]{$e$} -- (2.7182818, 0.1);
+	\draw (-2,0) -- (0,0);
+	\draw (1,0) -- (5,0);
+	\draw (0,-1) -- (0,0);
+	\draw (0,1)-- (0,5);
+	\draw[red] (-1,-0.5) -- (-1,4.5);
+	\draw (-0.5,-0.5) -- (4.5, 4.5);
+	\draw[scale=1,domain=-0.94:5,smooth,variable=\x,blue] plot ({\x},{\x-ln( \x + 1)});
+	\draw[<->, red] (-0.5,0) -- (0.5,0);
+	\end{tikzpicture}
+	\caption{La représentation graphique de la fonction $f$.}
+	\end{figure}
+	\item \begin{align*}
+		\mathcal{A}&=\int_0^e\Big|f(x)-x\Big|dx\\
+		&=\int_0^ex-(x-\ln(x+1))dx\\
+		&=\int_0^e\ln(x+1)dx\\
+		&=\Big[(x+1)\ln(x+1)-x\Big]_0^e\\
+		&=(e+1)\ln(e+1)-e   \; \; (u.a).
+	\end{align*}
+\end{enumerate}
+	\subsubsection*{Partie B.}
+	\begin{enumerate}
+		\item \begin{enumerate}[label=(\alph*)]
+			\item Soit $k$ un entier naturel non nul. On a $\frac{1}{k}\in]-1,\infty[$ et $\ln(x+1)\leq x, \; \forall_{x\in]-1,\infty[}$, alors,
+			\begin{align*}
+				\ln\Big(1+\frac{1}{k}\Big)&\leq\frac{1}{k}\\
+				\ln\Big(\frac{k+1}{k}\Big)&\leq\frac{1}{k}\\
+				\ln(k+1)-\ln k&\leq\frac{1}{k}.
+			\end{align*}
+			\item Soit $n$ un entier naturel non nul et $i\in\{1,2,\ldots,n\}$, alors,
+			\begin{align*}
+			\ln(i+1)-\ln i&\leq\frac{1}{i}\\
+			\sum_{i=1}^{n}\ln(i+1)-\sum_{i=1}^{n}\ln k&\leq\sum_{i=1}^{n}\frac{1}{i}\\
+			\ln(n+1)-\ln1&\leq S_n\\
+			\ln(n+1)&\leq S_n.
+			\end{align*}
+			Ajoutons que $$ \lim_{n\to+\infty}\ln(n+1)=+\infty$$, pour conclure que $$\lim_{n\to+\infty}S_n=+\infty$$.
+		\end{enumerate}
+		\item \begin{enumerate}[label=(\alph*)]
+			\item \begin{align*}
+				C_{n+1}-C_n & =(S_{n+1}-\ln(n+1))-(S_n-\ln n)\\
+				&=\sum_{i=1}^{n+1}\frac{1}{i}-\sum_{i=1}^{n+1}\frac{1}{i}+\ln\Big(\frac{n}{n+1}\Big)\\		&=\frac{1}{n+1}+\ln\Big(\frac{n}{n+1}\Big)\\
+				&=-\Bigg(\frac{-1}{n+1}-\ln\Big(1+\frac{-1}{n+1}\Big)\Bigg)\\
+				&=-f\Big(\frac{-1}{n+1}\Big)\\
+				\gamma_{n+1}-\gamma_n&=\Big(C_{n+1}-\frac{1}{n+1}\Big)-\Big(C_n-\frac{1}{n}\Big)\\
+				&=\Big(C_{n+1}-C_n\Big)+\frac{1}{n}-\frac{1}{n+1}\\
+				&=\frac{1}{n+1}+\ln\Big(\frac{n}{n+1}\Big)\\
+				&=\frac{1}{n}-\ln\Big(\frac{n+1}{n}\Big)\\
+				&=\frac{1}{n}-\ln\Big(1+\frac{1}{n}\Big)\\
+				&=f\Big(\frac{1}{n}\Big).
+			\end{align*}
+			\item Soit $n\in\mathbb{N}*$. On a $f(x)\geq0, \; \forall_{x\in]-1,\infty[}$ et $\frac{-1}{n+1}\in]-1,\infty[, \; \forall_{n\in\mathbb{N}*}$, donc $f\Big(\frac{-1}{n+1}\Big)\geq0$ et,
+			\begin{align*}
+				-f\Big(\frac{-1}{n+1}\Big)&\leq0\\
+				C_{n+1}-C_n&\leq0\\
+				C_{n+1}&\leq C_n.
+			\end{align*} 
+			Ainsi $(C_n)_{n\in\mathbb{N}*}$ est décroissante.
+			De même, $\frac{1}{n}\in]-1,\infty[, \; \forall_{n\in\mathbb{N}*}$ donc $f\Big(\frac{1}{n}\Big)\geq0$ alors $\gamma_{n+1}\geq\gamma_n$ et par suite $(\gamma_n)_{n\in\mathbb{N}*}$ est croissante.
+		\end{enumerate}
+		\item \begin{enumerate}[label=(\alph*)]
+			\item On a $(C_n)_{n\in\mathbb{N}*}$ est décroissante, $(\gamma_n)_{n\in\mathbb{N}*}$ est croissante et,
+			$$\lim_{n\to+\infty}C_n-\gamma_n=\lim_{n\to+\infty}Cn-(Cn-\frac{1}{n})=\lim_{n\to+\infty}\frac{1}{n}=0$$
+			Ainsi, $(C_n)_{n\in\mathbb{N}*}$ et $(\gamma_n)_{n\in\mathbb{N}*}$ sont adjacentes.
+		\item \begin{align*}
+			C_{10}&\geq C\geq\gamma_{10}\\
+			0,626&\geq C\geq 0,526.
+		\end{align*} 
+		\end{enumerate}
+	\end{enumerate}
+\subsection*{Exercice 3.}
+	\begin{enumerate}
+		\item \begin{enumerate}[label=(\alph*)]
+			\item \begin{theorem}[de Bézout]
+			Deux entiers relatifs $a$ et $b$ sont premiers entre eux si, et seulement s'il existe deux entiers relatifs $u$ et $v$ tels que $$au + bv = 1.$$
+		\end{theorem}
+		Comme, $5$ et $-3$ sont premiers entre eux alors d'après ce théorème ils existent $u$ et $v$ vérifiant, $$5x-3y=1.$$
+		En multipliant par $11$ on trouve que le couple $(11x,11y)$ satisfait à l'équation $(E)$.
+		\item Soit $(x,y)$ un couple solution de $(E)$ donc,\begin{align*}
+			5x-3y&=11\\
+			5x-3y&\equiv11\pmod{3}\\
+			2x&\equiv2\pmod{3}\\
+			4x&\equiv4\pmod{3}\\
+			x&\equiv1\pmod{3}.
+		\end{align*}
+		\item $(4,3)$ est un couple solution de $(E)$.\\
+		\item  On a si $(x,y)$ est solution de $(E)$ alors $x\equiv1\pmod{3}$ donc il existe $k\in\mathbb{Z}$ tel que $x=3k+1$. On a $5x-3y=11$, en remplaçant $x$ par $3k+1$ on trouve $y=5k-2$. Après vérification:
+		$$S_{\mathbb{Z}^2}=\{(3k+1,5k-1);k\in\mathbb{Z}\}.$$
+		\end{enumerate}
+	\item Je n'ai pas trouvé la réponse à cette question.
+	\item \begin{enumerate}[label=(\alph*)]
+		\item \begin{align*}
+			&\begin{cases}
+				x &\equiv4 \pmod5\\
+				x &\equiv2 \pmod3
+			\end{cases}\\
+			&\begin{cases}
+				3x \equiv 3\cdot4\pmod{3\cdot5}\\
+				5x \equiv 2\cdot5\pmod{3\cdot5}
+			\end{cases}\\
+			&\begin{cases}
+			9x \equiv -9\pmod{15}\\
+			10x \equiv 20\pmod{15}
+		\end{cases}\\
+		&\begin{cases}
+		9x \equiv 6\pmod{15}\\
+		10x \equiv 5\pmod{15}
+		\end{cases}
+		\end{align*}
+		\item si $x$ est une solution du système, c'est-à-dire, $$\begin{cases}
+		x &\equiv4 \pmod5\\
+		x &\equiv2 \pmod3
+		\end{cases}$$
+		alors,
+		$$\begin{cases}
+		9x \equiv 6\pmod{15}\\
+		10x \equiv 5\pmod{15}\end{cases}$$
+		alors, $10x-9x\equiv5-6\pmod{15}$ ou encore $x\equiv-1\pmod{15}$. Après vérification,
+		$$S_{\mathbb{Z}}=\{15k-1; k\in\mathbb{Z}\}.$$
+	\end{enumerate}
+	\end{enumerate}
+\subsection*{Exercice 1.}
+\begin{enumerate}
+	\item Vrai.
+	\item Vrai.
+	\item Je n'ai pas de réponse à cette question.
+	\item Faux, il manque une hypothèse. Les entiers $a$ et $b$ doivent être multiples de $2$.
+	\item Faux, $$\lim_{x\to+\infty}\frac{\ln x}{\sqrt{x}}=\lim_{x\to+\infty}\frac{\ln x}{x^{1/2}}=0$$ pourvu que $\frac{1}{2}\in\mathbb{Q}$.
+	\item Vrai.
+\end{enumerate}
+\end{document}
