@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr, mhchem, siunitx, amsmath, amssymb, amsfonts, tikz, amsthm, tkz-tab}
+\usepackage{tikz-3dplot, pgfplots}
+\usepackage{enumitem, caption}
+%\usepackage[margin=4cm]{geometry}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\today}
+\chead{Chimie}
+\lhead{Ahmed Chaïbi}
+\rfoot{Page numéro \thepage} 
+\begin{document}
+\subsection*{Exercice 1.\footnote{Devoir de synthèse II, lycée 18 janvier 1952 Sfax.}}
+Un élève désire montrer expérimentalement que le couple acide méthanoïque, ion méthanoate $\ce{(HCOOH,HCOO-)}$ met en jeu un acide faible et une base faible dans l'eau. Il détermine la valeur du $pKa$ de ce couple. Pour cela il procède de trois façons.
+\begin{enumerate}
+\item Il dispose d'une solution aqueuse $(S_1)$ d'acide méthanoïque de concentration molaire $C_1=\SI{0.04}{\mol\per\L}$ et le $pH-$mètre indique la valeur $2,6$.
+		\begin{enumerate}[label=(\alph*)]
+			\item Dresser le tableau descriptif de l'évolution du système.
+			\item Calculer les concentration des entités présentes en solution outre l'eau.
+			\item Montrer que le taux d'avancement final est donné par l'expression \[
+					\tau_f=\frac{10^{-pH}}{C_1}
+			.\] 
+			Calculer sa valeur.
+		\item Peut-on dans ces conditions écrire \[
+				pH=\frac{1}{2}(pKa-\log C_1)
+		?\] 
+		\item Déterminer, alors, la valeur du $pKa$.
+		\end{enumerate}
+	\item L'élève mesure ensuite le $pH$ d'une solution aqueuse de méthanoate de sodium $\ce{(HCOO^-,Na^+)}$ de concentration molaire  $C_2=\SI{0.04}{\mol\per\L}$. Il trouve que $pH=8,2$.
+		\begin{enumerate}[label=(\alph*)]
+			\item Montrer que le taux d'avancement final de cette réaction est donné par l'expression \[
+					\tau_f=\frac{10^{pH-pKe}}{C_2}
+			.\] Calculer sa valeur.
+		\item Déduire la valeur du $pKa$.
+		\end{enumerate}
+		\begin{minipage}{0.5\textwidth}
+	\item Au cours d'une troisième expérience l'élève étudie l'influence de la dilution sur la valeur du taux d'avancement final de la réaction de dissociation de l'ion méthanoate dans l'eau. Il trouve la courbe suivante.
+		\begin{enumerate}[label=(\alph*)]
+			\item Etablir en fonction de $C$ et $\tau_f$ l'expression du $Ka$ du couple $\ce{(HCOOH,HCOO^-)}$.
+			\item Déduire de cette expression et de la courbe  $\tau_f^2=f(\frac{1}{C}$ la valeur du $pKa$ du couple considéré.
+		\end{enumerate}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+	\begin{tikzpicture}[scale=0.5]
+		\draw (0,0) node[below left]{$0$};
+		\draw[->, thick] (0,0) -- (4,0) node[right]{$\frac{1}{C}(\si{\L\per\mol})$};
+		\draw[->, thick] (0,0) -- (0,4) node[above]{$\tau_f^2$};
+		\draw (0,0) -- (3.5,3.5);
+		\draw[red, dashed] (0,3) node[left]{$1,6\cdot{10}^{-11}$} -- (3,3) -- (3,0) node[below]{$25$};
+	\end{tikzpicture}
+	\captionof{figure}{Courbe $\tau_f^2=f(\frac{1}{C})$.}
+\end{minipage}
+\end{enumerate}
+\subsection*{Exercice 2.\footnote{Devoir de contrôle II, lycée pilote Sfax du 13 février 2015.} (*)}
+On donne, à $\SI{25}{\celsius}$, le produit ionique de l'eau $Ke=10^{-14}$.
+ \begin{enumerate}
+	 \item Rappeler dans le cadre de la théorie de Bronsted les définitions d'une base et d'un acide.
+	 \item On considère les couples acide-base suivants:
+		 \begin{table}[h!]
+		\centering
+		 \begin{tabular}{c|c|c}
+			 $C_1$ & $\ce{HCOOH},\ldots$ &  $pKa_1=3,8$\\
+			 $C_2$ & $\ldots,\ce{(CH_3)3N}$ & $pKb_2=4,1$\\
+			 $C_3$ & $\ldots,\ce{CH3NH2}$ & $Ka_3=\num{1,95e-11}$\\
+			 $C_4$ & $\ce{NH4^+},\ldots$ & $Kb_4=\num{1,6e-5}$
+		 \end{tabular}
+	 \end{table}
+
+Compléter le tableau et classer les acides de ces couples par ordre de force décroissante.
+\item On fait réagir les formes fortes des deux couples $(C_1)$ et $(C_3)$. Calculer la constante d'équilibre de la réaction et conclure.
+\item On mélange un volume $V_1=\SI{10}{\milli\L}$ d'une solution aqueuse $(S_1)$ de l'acide conjugué de la base $\ce{(CH3)3N}$ de concentration molaire $C_1=\SI{0.15}{\mol\per\L}$ et un volume $V_2=\SI{25}{\milli\L}$ d'une solution aqueuse $(S_2)$ de la base conjuguée de l'acide $\ce{NH4^+}$ de concentration $C_2=\SI{0.1}{\mol\per\L}$.
+	\begin{enumerate}[label=(\alph*)]
+	\item Dresser le tableau d'avancement du système chimique et calculer la constante d'équilibre de la réaction ainsi que l'avancement final de la réaction.
+	\item Calculer les concentrations des espèces chimiques autres que l'eau présentes en solution à l'état final et déduire le $pH$ du mélange.
+\end{enumerate}
+\end{enumerate}
+\end{document}

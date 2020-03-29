@@ -1,0 +1,272 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr, amsmath, amssymb, amsfonts, tikz, amsthm, tkz-tab}
+\usepackage{tikz-3dplot}
+\usepackage{enumitem, caption}
+\usetikzlibrary{patterns}
+%\usepackage[margin=4cm]{geometry}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\today}
+\chead{Solution proposée}
+\lhead{Ahmed Chaïbi}
+\rfoot{Page numéro \thepage}
+\DeclareMathOperator{\distan}{d}
+\begin{document}
+\section*{Q.C.M}
+\subsection*{Exercice 1.}
+\begin{minipage}[c]{0.3\textwidth}	
+\begin{enumerate}[label=(\alph*)]
+	\item Faux, $$\overrightarrow{IC}\cdot\overrightarrow{IO}=\frac{3}{4}a^2.$$
+	\item Vrai.
+	\item Faux, $OB=OC.$
+	\end{enumerate}
+\end{minipage}%
+\begin{minipage}[c]{0.7\textwidth}	
+	\centering
+	% Construction I
+	\tdplotsetmaincoords{100}{50}
+	\begin{tikzpicture}[tdplot_main_coords, scale=0.7]
+		% Le cube
+		\draw[dashed] (0,0,0) node[anchor=north east]{$A$} -- (3,0,0) node[anchor=north]{$D$} -- (3,3,0) node[anchor=north west]{$C$};
+		\draw (3,3,0) -- (0,3,0) node[anchor= north]{$B$}; 
+		\draw (0,3,0) -- (0,0,0) node[midway,anchor=north]{$a$} -- (0,0,3) node[anchor= south east]{$E$} -- (3,0,3) node[anchor=south]{$H$} -- (3,3,3) node[anchor=south west]{$G$} -- (0,3,3) node[anchor=south]{$F$} -- (0,0,3);
+		\draw[dashed] (3,0,0) -- (3,0,3);
+		\draw (3,3,0) -- (3,3,3);
+		\draw (0,3,0) -- (0,3,3);
+
+		% Le point O
+		\draw[dotted] (0,0,0) -- (3,0,3);
+		\draw[dotted] (0,0,3) -- (3,0,0);
+		\draw (1.5,0,1.5) node[right, red]{$O$};
+		\fill[red] (1.5,0,1.5) circle (1pt);
+		% Le point I
+		\draw (0,1.5,3) node[below, red]{$I$};
+		\fill[red] (0,1.5,3) circle (1.2pt);
+	
+	\end{tikzpicture}
+	\captionof{figure}{Construction I.}
+	% Fin de construction I
+\end{minipage}%
+\subsection*{Exercice 2.}
+\begin{minipage}[c]{0.3\textwidth}
+\begin{enumerate}[label=(\alph*)]
+	\item Vrai.
+	\item Faux, $$\overrightarrow{SC}\cdot\overrightarrow{SD}=23.$$
+	\item Faux, $$\mathcal{V}_{(SABCD)}=24 \; \; \; (u.v).$$
+\end{enumerate}
+\end{minipage}%
+\begin{minipage}[c]{0.7\textwidth}	
+	\centering
+	% Construction II
+	\tdplotsetmaincoords{100}{75}
+	\begin{tikzpicture}[tdplot_main_coords, scale=0.7]
+		% La pyramide
+		\draw[dashed] (0,0,0) node[anchor=east]{$A$} -- (3,0,0)  node[midway, anchor=south]{$3$};
+		\draw[dashed] (3,0,0) node[anchor=south west]{$B$}-- (3,4,0) node[midway, anchor=south west]{$4$};
+		\draw (3,4,0) node[anchor=north west]{$C$} -- (-3,4,0) node[midway, anchor=north west]{$6$};
+		\draw (-3,4,0) node[anchor=north]{$D$} -- (0,0,0);
+		\draw (0,0,0) -- (0,0,4) node[anchor=east, midway]{$4$};
+		\draw (0,0,4) node[anchor=south]{$S$} -- (-3,4,0);
+		\draw[dashed] (3,0,0) -- (0,0,4);
+		\draw (0,0,4) -- (3,4,0);
+		\draw[red] (0.4,0,0) -- (0.4,0,0.4) -- (0,0,0.4);
+		\draw[red] (2.6,0,0) -- (2.6,0.4,0) -- (3,0.4,0);
+		\draw[red] (2.6,4,0) -- (2.6,3.6,0) -- (3,3.6,0);
+	\end{tikzpicture}
+	\captionof{figure}{Construction II.}
+	% Fin de construction II
+\end{minipage}\\
+\\
+\\
+\begin{minipage}[t]{0.6\textwidth}
+\subsection*{Exercice 3.}
+\begin{enumerate}[label=(\alph*)]
+	\item Vrai.
+	\item Vrai.
+	\item Faux, \begin{align*}
+			\mathcal{A}_{(ABCD)}&=||\overrightarrow{AB}\wedge\overrightarrow{AD}||\\ 
+					&=3\sqrt{10} \; \; (u.a).
+	\end{align*}
+\end{enumerate}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+\subsection*{Exercice 5.}
+\begin{enumerate}[label=(\alph*)]
+	\item Faux, le vecteur nul est colinéaire à tout vecteur.
+	\item Vrai.
+	\item Vrai.
+\end{enumerate}
+\end{minipage}
+\subsection*{Exercice 4.}
+\begin{minipage}[c]{0.5\textwidth}
+\begin{enumerate}[label=(\alph*)]
+	\item Vrai.
+	\item Vrai.
+	\item Faux, \begin{align*}
+			\mathcal{A}_{(BDM)}&=\frac{1}{2}||\overrightarrow{MB}\wedge\overrightarrow{MD}||\\ 
+					   &=\frac{\sqrt{6}}{4} \; \; (u.a).
+	\end{align*}
+\end{enumerate}
+\end{minipage}%
+\begin{minipage}[c]{0.7\textwidth}	
+	\centering
+	% Construction III
+	\tdplotsetmaincoords{95}{72}
+	\begin{tikzpicture}[tdplot_main_coords]
+		\draw[dashed] (0,0,0) node[anchor=north east]{$A$} -- (3,0,0) node[anchor=east]{$B$} -- (3,3,0) node[anchor=north west]{$C$};
+		\draw (3,3,0) -- (0,3,0) node[anchor= north]{$D$}; 
+		\draw (0,3,0) -- (0,0,0) node[midway,anchor=north]{$1$} -- (0,0,3) node[anchor= south east]{$E$} -- (3,0,3) node[anchor=south]{$F$} -- (3,3,3) node[anchor=south west]{$G$} -- (0,3,3) node[anchor=south]{$H$} -- (0,0,3);
+		\draw[dashed] (3,0,0) -- (3,0,3);
+		\draw (3,3,0) -- (3,3,3);
+		\draw (0,3,0) -- (0,3,3);
+		\draw (0,0,1.5) node[anchor=east]{$M$};
+		\draw [pattern=north west lines, pattern color=red] (0,0,1.5) -- (0,3,0) -- (3,0,0);
+		\draw[red, thick] (0,0,1.5) -- (0,3,0) -- (3,0,0) -- (0,0,1.5);
+		\draw (0.5,0.5,1) node[anchor=south, blue]{$K$};
+		\fill[blue] (0.5,0.5,1) circle (1.5pt);
+	\end{tikzpicture}
+	\captionof{figure}{Construction III.}
+	% Fin de construction II
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{minipage}{0.4\textwidth}
+\subsection*{Exercice 6.}
+\begin{enumerate}[label=(\alph*)]
+	\item Vrai.
+	\item Vrai.
+	\item Faux, car $BA=2\sqrt{5}$.
+\end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+	\subsection*{Exercice 7.}
+	\begin{enumerate}[label=(\alph*)]
+	\item Vrai.
+	\item Faux.
+	\item Faux.
+\end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+	\subsection*{Exercice 8.}
+	\begin{enumerate}[label=(\alph*)]
+	\item Faux.
+	\item Faux.
+	\item Vrai.
+\end{enumerate}
+\end{minipage}
+
+
+\vspace{1cm}
+
+
+\begin{minipage}{0.5\textwidth}
+	\subsection*{Exercice 9.}
+	\begin{enumerate}[label=(\alph*)]
+	\item Vrai.
+	\item Faux.
+	\item Faux.
+\end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+	\subsection*{Exercice 10.}
+	\begin{enumerate}[label=(\alph*)]
+	\item Vrai.
+	\item Vrai.
+	\item Vrai.
+\end{enumerate}
+\end{minipage}
+\section*{Problèmes.}
+\subsection*{Exercice 1.}
+\begin{enumerate}
+	\item	Un vecteur est unitaire si sa norme vaut $1.$	\begin{align*}
+			||\vec{u}||&=\sqrt{(\frac{2}{3})^2+(-\frac{1}{3})^2+(-\frac{2}{3})^2}=1\\
+			||\vec{v}||&=\sqrt{(\frac{2}{3})^2+(\frac{2}{3})^2+(\frac{1}{3})^2}=1
+		\end{align*}
+		donc, $\vec{u}$ et $\vec{v}$ sont unitaires.
+		$$\vec{u}\cdot\vec{v}=\begin{bmatrix}\frac{2}{3}\\ -\frac{1}{3}\\ -\frac{2}{3} \end{bmatrix}\cdot\begin{bmatrix}\frac{2}{3}\\ \frac{2}{3} \\ \frac{1}{3}\end{bmatrix}=\frac{2}{3}\times\frac{2}{3}-\frac{1}{3}\times\frac{2}{3}-\frac{2}{3}\times\frac{1}{3}\\=0.$$
+		Ainsi, $\vec{u}$ et $\vec{v}$ sont orthogonales.
+	\item  \[
+			\vec{w}=\vec{u}\wedge\vec{v}=\begin{bmatrix}\frac{2}{3}\\ -\frac{1}{3}\\ -\frac{2}{3} \end{bmatrix}\wedge\begin{bmatrix}\frac{2}{3}\\ \frac{2}{3} \\ \frac{1}{3}\end{bmatrix}=\begin{bmatrix}\frac{1}{3} \\ -\frac{2}{3} \\ \frac{2}{3}\end{bmatrix}
+	.\] 
+\end{enumerate}
+\subsection*{Exercice 2.}
+\begin{enumerate}
+	\begin{minipage}{0.6\textwidth}
+	\item \begin{enumerate}
+		\item \[
+				\begin{cases}
+					\frac{x_I+x_L}{2}=\frac{1+1}{2}=1=x_A\\
+					\frac{y_I+y_L}{2}=\frac{0+0}{2}=0=y_A\\
+					\frac{z_I+z_L}{2}=\frac{0+1}{2}=\frac{1}{2}=z_A
+				\end{cases}
+		.\] 	
+		Ainsi $A$ est le milieu du segement $[IL]$.
+		$$
+			\overrightarrow{KB}=\begin{bmatrix}
+				0\\
+				\frac{2}{3}\\
+				0
+				\end{bmatrix}=\frac{2}{3}\begin{bmatrix}
+				0\\
+				1\\
+				0
+			\end{bmatrix}=\frac{2}{3}\overrightarrow{KN}
+	.$$
+\item \[
+		\vec{u}=\overrightarrow{OA}\wedge\overrightarrow{OB}=\begin{bmatrix}1\\0\\\frac{1}{2}\end{bmatrix}\wedge\begin{bmatrix}0\\\frac{2}{3}\\1\end{bmatrix}=\begin{bmatrix}-\frac{1}{3}\\-1\\\frac{2}{3}\end{bmatrix}
+.\] 
+	\end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.4\textwidth}
+	\centering
+	\tdplotsetmaincoords{110}{65}
+	\begin{tikzpicture}[tdplot_main_coords, scale=0.8]
+		\coordinate (O) at (0,0,0);
+		\coordinate (I) at (0,3,0);
+		\coordinate (R) at (3,3,0);
+		\coordinate (J) at (3,0,0);
+		\coordinate (A) at (0,3,1.5);
+		\coordinate (B) at (1,0,3);
+		\coordinate (K) at (0,0,3);
+		\coordinate (L) at (0,3,3);
+		\coordinate (M) at (3,3,3);
+		\coordinate (N) at (3,0,3);
+
+		\draw (O) node[anchor=north east, red]{$O$} -- (I) node[anchor=north]{$I$} -- (R) node[anchor=north west]{$R$} -- (M) node[anchor=south west]{$M$} -- (L) node[anchor=south]{$L$} -- (I);
+		\draw (K) node[anchor=south east, red]{$K$} -- (L);
+		\draw (M) -- (N) node[anchor=south]{$N$} -- (B) node[anchor=south east, red]{$B$};
+	\draw[dashed] (O) -- (J) node[anchor=south west]{$J$} -- (R);
+	\draw[dashed] (N) -- (J);
+	\draw[red, thick] (B) -- (K) -- (O) -- (A) node[anchor=west]{$A$} -- (K);
+	\draw[red, thick, dashed] (O) -- (B) -- (A);
+	\draw (1,3,3) node[anchor=north west]{$C$};
+	\fill (1,3,3) circle (1pt);
+
+	\end{tikzpicture}
+	\captionof{figure}{Construction IV.}
+\end{minipage}
+
+\item \begin{enumerate}
+	\item $$\mathcal{A}_{(OAB)}=\frac{1}{2}||\overrightarrow{OA}\wedge\overrightarrow{OB}||=\frac{1}{2}\sqrt{\Big(-\frac{1}{3}\Big)^2+(-1)^2+\Big(\frac{2}{3}\Big)^2}=\frac{\sqrt{14}}{6} \; \; \; \; (u.a).$$
+	\item $$\overrightarrow{OC}\cdot(\overrightarrow{OA}\wedge\overrightarrow{OB})=\overrightarrow{OC}\cdot\vec{u}=\begin{bmatrix}1\\\frac{1}{3}\\1\end{bmatrix}\cdot\begin{bmatrix}-\frac{1}{3}\\-1\\\frac{2}{3}\end{bmatrix}=-\frac{1}{3}\times1-1\times \frac{1}{3}+\frac{2}{3}\times1=0.$$
+		Ainsi $\overrightarrow{OA}, \overrightarrow{OB}$ et $\overrightarrow{OC}$ sont coplanaires et par suite $C\in\mathcal{P}$.
+\end{enumerate}
+\item \begin{enumerate}
+	\item \[
+		\mathcal{V}_{(OABC)}=\frac{1}{6}\Bigg|\overrightarrow{OK}\cdot(\overrightarrow{OA}\wedge\overrightarrow{OB})\Bigg|
+		=\frac{1}{6}\Bigg|\begin{bmatrix}0\\0\\1\end{bmatrix}\cdot\begin{bmatrix}-\frac{1}{3}\\-1\\\frac{2}{3}\end{bmatrix}\Bigg|
+		=\frac{1}{6}\Bigg|-\frac{1}{3}\times0-1\times0+\frac{2}{3}\times1\Bigg|=\frac{1}{9} \; \; \; (u.v)
+.\] 
+\item Or,  \[
+	\mathcal{V}_{(OABC)}=\frac{1}{3}\mathcal{A}_{(OAB)}\distan(K,\mathcal{P}),\] 
+donc, 
+\[
+	\distan(K,\mathcal{P})=\frac{3\mathcal{V}_{(OABC)}}{\mathcal{A}_{(OAB)}}= \frac{3\times \frac{1}{9}}{\frac{\sqrt{14}}{16}}=\frac{\sqrt{14}}{7}.
+.\] 
+\end{enumerate}
+\end{enumerate}
+\end{document}

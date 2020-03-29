@@ -1,0 +1,160 @@
+\documentclass[a4paper]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr, mhchem, siunitx, amsmath, amssymb, amsfonts, tikz, amsthm, tkz-tab}
+\usepackage{tikz-3dplot, pgfplots}
+\usepackage{enumitem, caption}
+%\usepackage[margin=4cm]{geometry}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\today}
+\chead{Mathématiques}
+\lhead{Ahmed Chaïbi}
+\rfoot{Page numéro \thepage} 
+\newcommand{\parasep}{
+\begin{center}
+   \includegraphics[scale=.5]{../../../FiguresCommunes/parasep.png}
+\end{center}}
+\begin{document}
+\subsection*{Exercice 1.\footnote{C.BJ.} (**)}
+On considère l'équation \[
+	(E):x^2-7y^2=1
+.\] ou les inconnues $x$ et $y$ sont des entiers naturels non nuls.
+\begin{enumerate}
+	\item \begin{enumerate}[label=(\alph*)]
+		\item Comparer $a$ et $b$.\\
+		\item Montrer que $1$ est le seul diviseur positif commun à $a$ et à $b$.\\
+		\item Démontrer que $a\equiv 1\pmod{7}$ ou $a\equiv -1 \pmod{7}$.
+	\end{enumerate}
+\item Trouver la solution $(a,b)$ de $(E)$ telle que $b$ soit le plus petit possible.
+\item 	\begin{enumerate}[label=(\alph*)]
+	\item Démontrer par récurrence qu'il existe un couple $(a_n,b_n)$ d'entiers naturels non nuls solution de $(E)$ et tel que \[
+			(8+3\sqrt{7})^n=a_n+b_n\sqrt{7}	.\]
+		\item Combien l'équation $(E)$ a-t-elle de solutions?
+	\end{enumerate}	
+\item 	\begin{enumerate}[label=(\alph*)]
+	\item Prouver que pour tout entier naturel non nul $n$ on a \[
+			(P_n):(8-3\sqrt{7})^n=a_n-b_n\sqrt{7}.\] 		
+	\item En déduire les expressions de $a_n$ et $b_n$ en fonction de $n$.
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Exercice 2.\footnote{C.BJ. modifié.} (***)}
+\subsubsection*{Partie I.}
+On considère la fonction $f$ définie sur $I=]-1,+\infty[$ par \[
+	\begin{cases}
+		f(x)&=\frac{\ln(x+1)}{x}, \; \; \; x\neq 0\\
+		f(0)&=1
+	\end{cases}
+.\] 
+Soit $\mathcal{C}_f$ sa courbe représentative dans le plan muni d'un repère orthonormé $(O,\vec{i},\vec{j})$.
+\begin{enumerate}
+	\item Montrer que $f$ est continue sur $I$.
+	\item \begin{enumerate}[label=(\alph*)]
+		\item Démontrer que pour tout réel $x\in\mathbb{R}_+^*$, puis pour tout réel $x\in]-1,0[$ on a, \[
+				0\leq\frac{1}{x}\int_0^x\frac{t^2}{t+1}dt\leq x\int_0^x\frac{1}{1+t}dt
+	.\]
+\item Démontrer que pour tout réel $x\in I\setminus\{0\}$ on a, \[
+		f(x)=1-\frac{1}{2}x-\frac{1}{x}\int_0^x\frac{t^2}{t+1}dt
+.\] 
+\item Démontrer, alors, que $f$ est dérivable en $0$, déterminer une équation de la tangente à $\mathcal{C}_f$ au point d'abscisse $0$ et étudier la position de celle-ci par rapport à cette tangente.
+	\end{enumerate}
+\item Soit $g$ la fonction définie sur $I$ par \[
+		g(x)=\ln(x+1)-\frac{x}{x+1}
+.\] 
+Etudier le signe de $g$ pour $x\in I$ et en déduire le sens de variation de $f$.
+\item Construire $\mathcal{C}_f$.
+\end{enumerate}
+\subsubsection*{Partie II.}
+\begin{enumerate}
+	\item Justifier que pour tout réels $a$ et $b$ de $I$ tels que $a<b$ on a, \[
+			(b-a)f(b)\leq\int_a^bf(t)dt\leq(b-a)f(a)
+	.\] 
+	En utilisant la méthode des rectangles pour $n=5$, en déduire un encadrement de l'aire de la partie du plan délimitée par l'axe des abscisses, la courbe $\mathbb{C}_f$ et les droites $(O,\vec{i}$ et $\Delta:x=1$.\\
+	\item Soit $h$ la fonction définie sur $I$ par \[
+			h(x)=x+1-(x+1)\ln(x+1)
+	.\] 
+	\begin{enumerate}[label=(\alph*)]
+		\item Dresser le tableau de variation de $h$.
+		\item Montrer que pour tout $x\in]-1,-\frac{1}{2}]$ on a, \[
+				0\leq f(x)\leq-2\ln(x+1)
+		.\] 
+	\item En déduire que la fonction \[
+			F:x\mapsto\int_x^{-\frac{1}{2}}f(t)dt\] 
+			est majorée dans $]-1,-\frac{1}{2}]$.
+	\end{enumerate}
+\item	On considère la suite $(V_n)_{n\in\mathbb{N}*}$ de terme général \[
+		V_n=\int_{-1+\frac{1}{n}}^0f(t)dt
+.\] 
+Etudier le sens de variation de la suite $(V_n)_{n\in\mathbb{N}*}$ et conclure.
+\end{enumerate}
+\newpage
+\subsection*{Exercice 3.\footnote{Sujet baccalauréat 2008, modifié.}}
+Le plan est orienté dans le sens trigonométrique. Soit $OAB$ un triangle isocèle rectangle direct en $O$. On désigne par $I$ le milieu de $[AB]$ et par $C$ et $D$ les symétriques respectifs du point $I$ par rapport à $O$ et à $B$. Soit $f$ la similitude directe qui envoie $A$ sur $D$ et $O$ sur $C$.
+
+ \begin{enumerate}
+\begin{minipage}{0.5\textwidth}
+	 \item Montrer que $f$ est de rapport $2$ et d'angle $\frac{\pi}{2}$.
+	 \item \begin{enumerate}[label=(\alph*)]
+		 \item Montrer que $O$ est l'orthocentre du triangle $ACD$.
+		 \item Soit $J$ le projeté orthogonal du point $O$ sur $(AC)$. Montrer que $J$ est le centre de la similitude $f$.
+		\end{enumerate}
+	\item Soit $g$ la similitude indirecte de centre $I$ qui envoie $A$ sur $D$.
+		\begin{enumerate}[label=(\alph*)]
+			\item Vérifier que $g$ est de rapport $2$ et d'axe $(IC)$. En déduire $g(O)$.
+			\item Déterminer la nature (et les caractéristiques) de $g\circ f^{-1}$. 
+		\end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+	\centering
+	\begin{tikzpicture}[scale=0.6]
+	\draw (0,0) node[left]{$O$} -- (3,0) node[right]{$A$} -- (0,3) node[above right]{$B$} -- (0,0);
+	\draw (-1.5,-1.5) node[below left]{$C$} -- (1.5,1.5) node[above right]{$I$};
+	\draw (-1.5,4.5) node[above left]{$D$} -- (0,3);
+	\draw[red] (-1.5,4.5) -- (-1.5,-1.5);
+	\draw (-1.5,-1.5) -- (3,0);
+	\draw (0.3,-0.9) node[below right]{$J$} -- (0,0);
+	\draw (0.48,-0.84) -- (0.42,-0.66) -- (0.247, -0.723);
+	\draw (0,0.2) -- (0.2,0.2) -- (0.2,0);
+	\draw (1.6414, 1.355857) -- (1.5, 1.217157) -- (1.355857,1.355857);
+	\draw (1.5,-0.1) -- (1.5,0.1);
+	\draw (-0.1,1.5) -- (0.1,1.5);
+	\draw[red] (0.3,-0.9) -- (1.5,1.5);
+\end{tikzpicture}
+\captionof{figure}{Construction I.}
+\end{minipage}
+	\item Soient $I'=f(I)$ et $J'=g(J)$. Montrer que les droites $(IJ), (I'J')$ et $(CD)$ sont concourrantes.
+\end{enumerate}
+
+
+
+\subsection*{Exercice 4.\footnote{Sujet baccalauréat 2009, modifié.}}
+Le plan est orienté dans le sens trigonométrique. Soit $ABC$ un triangle isocèle rectangle direct en $A$. On désigne par $I, J, K, H$ et $L$ les milieux respectifs des segments $[AB], [BC], [AC], [AJ]$ et $[JC]$.
+\begin{enumerate}
+	\item Soit $f$ la similitude directe de centre $J$ qui envoie $A$ sur $K$. Déterminer ses caractéristiques puis déterminer les images de $L$ et $I$.
+
+\begin{minipage}{0.5\textwidth}
+	\item On muni le plan du repère $(A,\overrightarrow{AB},\overrightarrow{AC})$. Soit $\phi$ l'application du plan dans lui-même qui à tout point $M$ associe le point $M'$ tels que \[
+			z_{M'}=-\frac{1+i}{2} \overline{z_M}+\frac{1+i}{2}
+	.\] 
+	\begin{enumerate}
+		\item Montrer que $\phi$ est une similitude indirecte de centre $C$.
+		\item Montrer que $\phi=f\circ S_{(IK)}$.
+	\end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+	\centering
+\begin{tikzpicture}[scale=1]
+	\draw (0,0) node[below left]{$A$} -- (1.5,0) node[below left]{$I$} -- (3,0) node[below right]{$B$} -- (1.5,1.5) node[above right]{$J$} -- (0.75,2.25) node[above right]{$L$} -- (0,3) node[above left]{$C$} -- (0,1.5) node[below left]{$K$} -- (0,0);
+	\draw[red] (0.75,0.75) node[above right]{$H$};
+	\draw[red, thick] (-0.5,2) -- (2,-0.5);
+	\fill[red] (0.75,0.75) circle (0.5pt);
+	\fill (0.75,2.25) circle (0.5pt);
+	\fill (1.5,1.5) circle (0.5pt);
+\end{tikzpicture}
+\captionof{figure}{Construction II.}
+\end{minipage}
+\end{enumerate}
+\end{document}

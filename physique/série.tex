@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr, mhchem, siunitx, amsmath, amssymb, amsfonts, tikz, amsthm, tkz-tab}
+\usepackage{tikz-3dplot, pgfplots}
+\usepackage{enumitem, caption}
+%\usepackage[margin=4cm]{geometry}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\today}
+\chead{Physique}
+\lhead{Ahmed Chaïbi}
+\rfoot{Page numéro \thepage} 
+\begin{document}
+\subsection*{Exercice 1.\footnote{Devoir de contrôle II, lycée pilote Sfax du 23 janvier 2014.} (**)}
+Un circuit série comporte un conducteur ohmique d résistance $R$, un condensateur de capacité $C=\SI{5,74}{\micro\F}$, une bobine d'inductance $L$ et de résistance $r$ et un ampèremètre de résistance négligeable.
+
+Un générateur de basse fréquence impose au bornes de cette association une tension $u(t)=U_m\sin(2\pi Nt)$ de fréquence $N$ réglable et d'amplitude $U_m$ constante.
+
+Un oscilloscope bicourbe convenablement branché permet de visualiser simultanément la tension $u(t)$ et la tension $u_1(t)$ aux bornes de l'ensemble \{résistor, condensateur\}.
+\begin{enumerate}
+	\item \begin{enumerate}[label=(\alph*)]
+		\item Représenter le schéma du circuit en précisant les branchements à l'oscilloscope.
+		\item Etablir l'équation différentielle vérifiée par l'intensité du courant $i(t)$.
+	\end{enumerate}
+\item Pour  $N=N_1$, l'ampèremètre indique $I_1=25\sqrt{2}\si{\milli\A}$ et on obtient l'oscillogramme présenté.
+	\begin{enumerate}[label=(\alph*)]
+		\item	Déterminer les expressions de $u(t)$ et de $u_1(t)$.
+\item Faire une construcion de Fresnel en représentant les vecteurs associés à $u_b(t), u_1(t)$ et à $u(t)$ et déduire l'expression de la tension $u_b(t)$.
+\item Calculer  $U_{cm}$ puis montrer que \[
+		\phi_i-\phi_u=\frac{\pi}{3}\si{\radian}
+.\] 
+\item Déduire les valeurs de $R, r$ et $L$.
+	\end{enumerate}
+\item Dans la suite de l'exercice on prendra $R=\SI{80}{\ohm}, r=\SI{24}{\ohm}$ et $L=\SI{0.16}{\henry}$.
+
+	En faisant varier la fréquence, l'ampèremètre indique la plus grande valeur de $I$ pour une fréquence $N=N_2$.
+
+
+	\begin{minipage}{0.5\textwidth}
+	\begin{enumerate}[label=(\alph*)]
+		\item A-t-on diminué ou augmenté la fréquence?
+		\item Quelle la valeur indiquée par l'ampèremètre?
+		\item Déterminer l'expression de $u_C(t)$. Y a-t-il un phénomène de surtension?
+		\item Calculer la puissance moyenne absorbée par le dipôle.
+	\end{enumerate}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+	\centering
+\begin{tikzpicture}[scale=0.5]
+	\draw (1,0)  -- (9,0);
+	\draw[step=1.0,black,thin, dashed] (1,-4) grid (9,4);
+	\draw[domain=1:9,red, thick, samples=50] plot (\x,{3*sin(50*\x)});
+	\draw[domain=1:9,blue, thick,  samples=50] plot (\x,{4*sin(50*\x-90)});
+	\draw (5,-5) node{Sensibilité verticale $\SI{2}{\V}$};
+	\draw (5,-4.5) node{Sensibilité horizontale $\SI{0.5}{\milli\second}$};
+	\draw (4,-1) node[below left, red]{$u$};
+	\draw (5,1.3) node[right, blue]{$u_1$};
+	\end{tikzpicture}
+	\captionof{figure}{Courbes de $u(t)$ et $u_1(t)$.}
+\end{minipage}
+\end{enumerate}
+\end{document}
