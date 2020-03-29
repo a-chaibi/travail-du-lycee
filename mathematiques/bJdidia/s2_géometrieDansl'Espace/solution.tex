@@ -269,4 +269,112 @@ donc,
 .\] 
 \end{enumerate}
 \end{enumerate}
+\subsection*{Exercice 3.}
+\begin{enumerate}
+	\item Le vecteur $\vec{n}\begin{bmatrix}1\\-1\\1\end{bmatrix}$ est normal à $\mathcal{P}$ donc $\mathcal{P}:x-y+z+d=0$. Or, le point $A(1,0,1)\in\mathcal{P}$ donc $d=-2$ et,
+		\begin{equation}
+			\mathcal{P}:x-y+z-2=0\label{eq:planP}
+.\end{equation}
+Et puis,
+\begin{align}
+	S:&x^2+y^2+z^2-2x-8z+13=0\label{eq:sphèreS}\\
+	&(x-1)^2+y^2+(z-4)^2=2^2
+	\nonumber
+\end{align}
+donc $S$ est la sphère de centre  $C(1,0,4)$ et de rayon $R=2$.
+ \[
+	 \distan(C,\mathcal{P})=\frac{\Big|1-0+1-2\Big|}{\sqrt{1^2+(-1)^2+1^2}}=\sqrt{3}
+.\]
+Dès lors, $\distan(C,\mathcal{P})<R$ et $\mathcal{P}$ et $S$ sont sécants.
+\item Soit  $\mathcal{D}$ la perpendiculaire à $\mathcal{P}$ menée par $C(1,0,4)$ et $H\in\mathcal{D}\cap\mathcal{P }$. Alors $ \vec{n}$ est directeur de $\mathcal{D}$ et pour $\alpha$ un paramètre réel
+	\begin{equation}
+		\mathcal{D}:\begin{cases}
+			x=\alpha+1\\
+			y=-\alpha\\
+			z=\alpha+4
+		\end{cases}.\label{eq:droiteD}
+	\end{equation}
+	Comme $H$ est l'intersection de $\mathcal{P}$ et $\mathcal{D}$, ses coordonnées satisfont aux équations \eqref{eq:planP} et \eqref{eq:droiteD} donc $\alpha_H+1-(-\alpha_H)+\alpha_H+4-2=0$ puis $\alpha_H=2$ et $H(2,-1,5)$. $S\cap\mathcal{P}$ est un cercle de centre $H$ et de rayon $r=\sqrt{R^2-CH^2}$. On a $\overrightarrow{CH}=\begin{bmatrix}1\\-1\\1\end{bmatrix}$ donc $CH=\sqrt{3}$ et de là $r=1$.
+\item Soit $Q$ un plan tangent à $S$ et parallèle à $\mathcal{P}$ donc $\vec{n}$ est normal à $Q$ et $\distan(C,Q)=R$ alors $Q:x-y+z+\beta=$ et
+	$$\frac{\Big|1-0+4+\beta\Big|}{\sqrt{1^2+(-1)^2+1^2}}=2$$
+	par suite $\Big|\beta+5\Big|=2\sqrt{3}$ et $\beta\in\{2\sqrt{3}-5, -2\sqrt{3}-5\}$. Ainsi $Q\in\{P_1,P_2\}$ avec
+	\begin{align*}
+		P_1&:x-y+z+2\sqrt3-5=0\\
+		P_2&:x-y+z-2\sqrt3-5=0
+	\end{align*}
+\item On a, \begin{equation}
+		\Delta:\begin{cases}
+			x=t+1\\
+			y=-t\\
+			z=t+3
+		\end{cases}
+		.\label{eq:droiteDelta}\end{equation}
+Ainsi $\vec{n}$ est directeur de $\Delta$, et comme il est normal à $\mathcal{P}$ il en découle que $\Delta\perp\mathcal{P}$.
+
+Soit  $M(x,y,z)$ un point de $\Delta\cap S$, donc ses coordonnées satisfont au systèmes \eqref{eq:sphèreS} et \eqref{eq:droiteDelta} donc,  \[
+	(t+1)^2+(-t)^2+(t+3)^2-2(t+1)-8(t+3)+13=0
+.\] 
+Ou encore, $3t^2-2t-3=0$ dont les solutions sont $t_1=\frac{1+\sqrt{10}}{3}$ et $t_2=\frac{1-\sqrt{10}}{3}$ qui correspondent au points,
+
+$$\begin{cases}
+	M_1\Big(\frac{1+\sqrt{10}}{3}+1,-\frac{1+\sqrt{10}}{3},\frac{1+\sqrt{10}}{3}+3\Big)\\
+	M_2\Big(\frac{1-\sqrt{10}}{3}+1,-\frac{1-\sqrt{10}}{3},\frac{1-\sqrt{10}}{3}+3\Big)
+\end{cases}.
+$$
+Bien entendu, $S\cap\mathcal{D}=\{M_1,M_2\}$.
+\end{enumerate}
+\subsection*{Exercice 4.}
+\begin{enumerate}
+	\item	L'équation de $S$ s'écrit,
+		\begin{equation}
+			S:(x-2)^2+(y+1)^2+z^2=3^2.\label{eq:sphèreII}
+	\end{equation} 
+	Alors  $S$ est une sphère de centre $W(2,-1,0)$ et de rayon $R=3$.
+\item  \[
+		\overrightarrow{WA}\wedge\vec{u}=\begin{bmatrix}0\\0\\1\end{bmatrix}\wedge\begin{bmatrix}1\\-2\\-1\end{bmatrix}=\begin{bmatrix}2\\1\\0\end{bmatrix}
+.\] 
+\[
+	\distan(W,\mathbb{D})=\frac{\Big|\Big|\overrightarrow{WA}\wedge\vec{u}\Big|\Big|}{||\vec{u}||}=\frac{\sqrt{2^2+1^2+0^2}}{\sqrt{1^2+(-2)^2+1^2}}=\frac{\sqrt{30}}{6}
+.\] 
+On a $\vec{u}\begin{bmatrix}1\\-2\\1\end{bmatrix}$ est directeur de $\mathcal{D}$ et $A(2,-1,1)\in\mathcal{D}$ donc, pour $t$ un paramètre réel.
+\begin{equation}
+	\mathcal{D}:\begin{cases}
+		x=t+2\\
+		y=-2t-1\\
+		z=-t+1
+	\end{cases}\label{eq:droiteII}
+	\end{equation}
+	Soit $M(x,y,z)$ un point de l'intersection de $S$ et $\mathcal{D}$. Donc ses coordonnées satisfont à l'équation \eqref{eq:sphèreII} aussi bien qu'au système \eqref{eq:droiteII}. Alors,
+	\[
+		(t+2-2)^2+(-2t-1+1)^2+(-t+1)^2=3^2
+	.\] 
+	Ou encore, $6t^2+8$ donc $t\in\Big\{\frac{2\sqrt{3}}{3},-\frac{2\sqrt{3}}{3}\Big\}$. On trouve ainsi les points points suivants,
+	 \[
+		 \begin{cases}
+			 M_1\Big(\frac{2\sqrt{3}}{3}+2,-\frac{4\sqrt{3}}{3}-1,-\frac{2\sqrt{3}}{3}+1\Big)\\
+			 M_2\Big(-\frac{2\sqrt{3}}{3}+2,-\frac{4\sqrt{3}}{3}-1,\frac{2\sqrt{3}}{3}+1\Big)\\
+			 S\cap\mathcal{D}
+		 \end{cases}.
+	\] 
+\item $$\distan(W,P_m)=\frac{\Big|0-4+m|}{\sqrt{0^2+1^2+(-1)^2}}=\frac{\big|m-4\big|}{\sqrt{2}}.$$
+	L'équation  $\distan(W,P_m)=R$ équivaut à  $m^2-8m-2=0$. Ainsi,
+	\begin{itemize}
+		\item Si $m>4+3\sqrt{2}$ ou $m<4-3\sqrt{2}$, alors  $S\cap \mathcal{P}_m=\emptyset$.
+		\item Si $m\in\Big\{4+3\sqrt{2}, 4-3\sqrt{2}\Big\}$, alors $S\cap \mathcal{P}_m$ est un point.
+	\item Sinon, $S\cap \mathcal{P}_m$ est un cercle de rayon $\sqrt{3^2-\distan(W,\mathcal{P}_m)}$ et dont le centre est le projeté orthogonal de $W$ sur $\mathcal{P}_m$. 
+\end{itemize}
+	\item On a $0\in]4-3\sqrt{2},4+3\sqrt{2}[$ donc $S\cap\mathcal{P}_0$ est un cercle. Soit  $\Delta$ la perpendiculaire à  $\mathcal{P}_0$ passante par $W(2,1,0)$. Comme $\mathcal{P}_0:y-z=0$, on a $\vec{w}\begin{bmatrix}0\\1\\-1\end{bmatrix}$ est normal à $\mathcal{P}_0$ et par suite directeur à $\Delta$. Ainsi, pour  $\alpha$ un paramètre réel,
+		\begin{equation}
+			\Delta:\begin{cases}
+				x=2\\
+				y=\alpha-1\\
+				z=-\alpha
+			\end{cases}\label{eq:delta}
+		\end{equation}
+		On répète le même algorithme, $H\in\Delta\cap\mathcal{P}_0$ donc  $y_H-zH=0$ et en remplaçant par les expressions de \eqref{eq:delta}, on trouve  $\alpha=\frac{1}{2}$ et $H(2,-\frac{1}{2},-\frac{1}{2})$.
+		Ainsi $S\cap\mathcal{P}_0$ est le cercle de centre $H$ et de rayon $r=\sqrt{3^2-WH^2}$. Or $\overrightarrow{WH}\begin{bmatrix}0\\\frac{1}{2}\\-\frac{1}{2}\end{bmatrix}$ donc $WH=\sqrt{\frac{1}{4}+\frac{1}{4}}=\frac{1}{\sqrt{2}}$. Ainsi, $r=\frac{\sqrt{34}}{2}$.
+	\item On $O\in\mathcal{P}_0$ donc $\mathcal{P}_0'=h_{(O,2)}(\mathcal{P}_0)=\mathcal{P}_0$ et  $S$ est une sphère de centre  $W(2,-1,0)$ et de rayon $3$ donc  $S'=h_{(O,2)}(S)$ est une sphère de centre $W'(4,-2,0)$ et de rayon $2\times3=6$. Elle est d'équation, \[
+			S':(x-4)^2+(y+2)^2+z^2=36
+	.\] 
+\end{enumerate}
 \end{document}
