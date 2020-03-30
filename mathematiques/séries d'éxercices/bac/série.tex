@@ -91,7 +91,7 @@ Etudier le signe de $g$ pour $x\in I$ et en déduire le sens de variation de $f$
 Etudier le sens de variation de la suite $(V_n)_{n\in\mathbb{N}*}$ et conclure.
 \end{enumerate}
 \newpage
-\subsection*{Exercice 3.\footnote{Sujet baccalauréat 2008, modifié.}}
+\subsection*{Exercice 3.\footnote{Sujet baccalauréat 2008, modifié.} (*)}
 Le plan est orienté dans le sens trigonométrique. Soit $OAB$ un triangle isocèle rectangle direct en $O$. On désigne par $I$ le milieu de $[AB]$ et par $C$ et $D$ les symétriques respectifs du point $I$ par rapport à $O$ et à $B$. Soit $f$ la similitude directe qui envoie $A$ sur $D$ et $O$ sur $C$.
 
  \begin{enumerate}
@@ -129,8 +129,7 @@ Le plan est orienté dans le sens trigonométrique. Soit $OAB$ un triangle isoc�
 \end{enumerate}
 
 
-
-\subsection*{Exercice 4.\footnote{Sujet baccalauréat 2009, modifié.}}
+\subsection*{Exercice 4.\footnote{Sujet baccalauréat 2009, modifié.} (*)}
 Le plan est orienté dans le sens trigonométrique. Soit $ABC$ un triangle isocèle rectangle direct en $A$. On désigne par $I, J, K, H$ et $L$ les milieux respectifs des segments $[AB], [BC], [AC], [AJ]$ et $[JC]$.
 \begin{enumerate}
 	\item Soit $f$ la similitude directe de centre $J$ qui envoie $A$ sur $K$. Déterminer ses caractéristiques puis déterminer les images de $L$ et $I$.
@@ -156,5 +155,61 @@ Le plan est orienté dans le sens trigonométrique. Soit $ABC$ un triangle isoc�
 \end{tikzpicture}
 \captionof{figure}{Construction II.}
 \end{minipage}
+\end{enumerate}
+\newpage
+\subsection*{Exercice 5.\footnote{I.M.}}
+Soit $OAB$ un triangle isocèle rectangle tel que $AB=4$. On note $I$ le milieu de $[AB]$ et $F$ le point défini par $\overrightarrow{OF}=\frac{1}{4}\overrightarrow{OI}$. Soit $\mathcal{P}$ la parabole de foyer $F$ et de sommet $O$. On munit le plan du repère orthonormé $(O,\vec{i},\vec{j})$ tel que $\vec{i}=\frac{1}{2}\overrightarrow{OI}$.
+
+\begin{enumerate}
+	\item Montrer que dans ce repère, $\mathcal{P}$ a pour équation $y^2=2x.$ Puis, montrer que $\mathcal{P}$ passe par $A$ et $B$.
+
+
+
+	\begin{minipage}{0.45\textwidth}
+	\item La tangente à $\mathcal{P}$ en $A$ coupe $(OI)$ en un point $J$. Montrer que $O$ est le milieur $[IJ]$.
+	\item Soit $M(x_1,y_1)$ un point de $\mathcal{P}$ distinct de $O$. La perpendiculaire à $(OM)$ en $O$ recoupe $\mathcal{P}$ en un point $N(x_2,y_2)$. Soient les réel $(a,b)$ pour lesquelles $(MN)$ a pour équation $y=ax+b$. 
+
+		Montrer que $y_1$ et $y_2$ sont les solutions de l'équation $y^2-2ay-2b=0$ puis que $b=2$. 
+
+	\end{minipage}%
+\begin{minipage}{0.55\textwidth}
+	\centering
+	\begin{tikzpicture}
+	\coordinate (O) at (0,0);
+	\coordinate (A) at (2,-2);
+	\coordinate (B) at (2,2);
+	\coordinate (I) at (2,0);
+	\coordinate (F) at (1,0);
+	\draw (O) node[below left]{$O$} -- (A) node[below]{$A$} -- (B) node[above]{$B$} -- (O) -- (I) node[right]{$I$};
+	\draw (-2.75,0) -- (O);
+	\draw (1.8,0) -- (1.8,0.2) -- (2,0.2);
+	\draw (0.1415,0.1415) -- (0.2828,0) -- (0.1415,-0.1415);
+	\draw[domain=0:3, red, thick, samples=50] plot (\x,{sqrt(2*\x)});
+	\draw[domain=0:3, red, thick,  samples=50] plot (\x,{-sqrt(2*\x)});
+	\draw[domain=-2.75:3, samples=50] plot (\x,{-0.5*\x-1});
+	\draw (-2.15,0) node[below]{$J$};
+	\draw[->] (O) -- (1,0) node[midway, above]{$\vec{i}$};
+	\draw[->] (O) -- (0,1) node[midway, left]{$\vec{j}$};
+	\draw (0.5,0) node[below]{$F$};
+	\fill (0.5,0) circle (1pt);
+	\draw (2.75,2.345) node[above, red]{$\mathcal{P}$};
+	\draw (2,1) node[left]{$2$};
+	\end{tikzpicture}
+	\captionof{figure}{Construction III.}
+\end{minipage}
+	\item En déduire que lorsque $M$ varie sur $\mathcal{P}$, la droite  $(MN)$ passe par un point fixe.
+
+\end{enumerate}
+\subsection*{Exercice 6.\footnote{I.M.} (**)}
+Soit $f$ une fonction décroissante sur $[0,1]$. On considère la suite $(u_n)_{n\in\mathbb{N}^*}$ de terme général $$u_n=\frac{1}{n}\sum_{i=1}^nf\Big(\frac{i}{n}\Big).$$
+\begin{enumerate}
+	\item Montrer que pour tout $n\in\mathbb{N}^*$ et pour tout $i\in\{0,1,\ldots,n-1\}$ on a:  \[
+			\frac{1}{n}f\Big(\frac{i+1}{n}\Big)\leq\int_{\frac{i}{n}}^{\frac{i+1}{n}}f(t)dt\leq\frac{1}{n}f\Big(\frac{i}{n}\Big)
+		.\] 
+	\item En déduire la limite de $(u_n)_{n\in\mathbb{N}^*}$.
+\item Calculer,
+	\[
+		\lim_{n\to+\infty}n\sum_{i=1}^n\frac{1}{(i+n)^2}\; \text{ et } \; \lim_{n\to+\infty}\frac{1}{\sqrt{n}^3}\sum_{i=1}^{n}\sqrt{n-i}
+	.\] 
 \end{enumerate}
 \end{document}
