@@ -5,6 +5,8 @@
 \usepackage{tikz-3dplot, pgfplots}
 \usepackage{enumitem, caption}
 %\usepackage[margin=4cm]{geometry}
+\usepackage[symbol]{footmisc} 
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\today}
@@ -22,8 +24,8 @@ On considère l'équation \[
 .\] ou les inconnues $x$ et $y$ sont des entiers naturels non nuls.
 \begin{enumerate}
 	\item \begin{enumerate}[label=(\alph*)]
-		\item Comparer $a$ et $b$.\\
-		\item Montrer que $1$ est le seul diviseur positif commun à $a$ et à $b$.\\
+		\item Comparer $a$ et $b$.
+		\item Montrer que $1$ est le seul diviseur positif commun à $a$ et à $b$.
 		\item Démontrer que $a\equiv 1\pmod{7}$ ou $a\equiv -1 \pmod{7}$.
 	\end{enumerate}
 \item Trouver la solution $(a,b)$ de $(E)$ telle que $b$ soit le plus petit possible.
@@ -44,9 +46,9 @@ On considère l'équation \[
 \subsection*{Exercice 2.\footnote{C.BJ. modifié.} (***)}
 \subsubsection*{Partie I.}
 On considère la fonction $f$ définie sur $I=]-1,+\infty[$ par \[
-	\begin{cases}
-		f(x)&=\frac{\ln(x+1)}{x}, \; \; \; x\neq 0\\
-		f(0)&=1
+	f(x)=\begin{cases}
+		\frac{\ln(x+1)}{x} \; \;&\text{si}\; x\neq 0\\
+		1 \; \; &\text{si}\; x=0
 	\end{cases}
 .\] 
 Soit $\mathcal{C}_f$ sa courbe représentative dans le plan muni d'un repère orthonormé $(O,\vec{i},\vec{j})$.

@@ -4,7 +4,10 @@
 \usepackage{fancyhdr, mhchem, siunitx, amsmath, amssymb, amsfonts, tikz, amsthm, tkz-tab}
 \usepackage{tikz-3dplot, pgfplots}
 \usepackage{enumitem, caption}
+\usepackage{csquotes}
 %\usepackage[margin=4cm]{geometry}
+\usepackage[symbol]{footmisc} 
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\today}
@@ -60,4 +63,33 @@ Un oscilloscope bicourbe convenablement branché permet de visualiser simultané
 	\captionof{figure}{Courbes de $u(t)$ et $u_1(t)$.}
 \end{minipage}
 \end{enumerate}
+\newpage
+\subsection*{Exercice 2.\footnote{Devoir de synthèse II, lycée pilote Sfax.}}
+Une onde horizontale de longueur $l=SD=1,68\si{\meter}$ est tendue entre un point $S$ d'un vibreur et un dispositif qui évite la réflexion des ondes incidentes. L'équation horaire de son mouvement est $y_S(t)=a\sin(2\pi Nt+\phi_S)$ avec $N=100\si{\hertz}$. Une onde progressive transversale prend naissance le long de la corde.
+ \begin{enumerate}
+	 \item Expliquer les mots  \enquote{progressive} et \enquote{transversale}.
+	 \item Etablir l'équation horaire du mouvement d'un point $M$ de la corde situé au repos à la distance $x=SM$ de la source.
+	 \item La figure \ref{fig:exII} représente l'aspect de la courbe à une date $t_1$.
+		 \begin{enumerate}
+			 \item Déterminer $t_1$, la célérité de l'onde $v$ et sa période spaciale $\lambda$.
+			 \item Déterminer l'équation $y_{t_1}(x)$ de cette courbe.
+		 \end{enumerate}
+	 \item Déterminer les positions des points de la corde ayant à la date $t_1$ une élongation $y=\sqrt{2}\si{\milli\meter}$ et s'éloignant de la source dans le sens positif des élongations.
+	 \item Etablir l'équation horaire du mouvement du point $A$ situé au repos à $52\si{\cm}$ de $S$, représenter sa sinusoïde des temps et calculer sa vitesse à $t_2=10\si{\milli\second}$ et à $t_3=20\si{\milli\second}$.
+	 \item Déterminer la position des points, situés entre $S$ et $A$, qui vibrent en quadrature avance de phase avec le point $A$.
+\end{enumerate}
+\begin{figure}[h!]
+	\centering
+\begin{tikzpicture}
+	\draw[->] (0,0) node[left]{$S$}  -- (11.5,0) node[right]{$x$};
+	\draw[->] (0,-1) -- (0,1) node[above]{$y(\si{\milli\meter})$};
+	\draw[step=0.5,black,thin, dashed] (0,-1) grid (11.5,1);
+	\draw[domain=0:7.5,red, thick, samples=100] plot (\x,{sin(180*\x-90)});
+	\draw[red, thick] (7.5,0) -- (10.5,0) node[below right]{$D$};
+	\draw (0,1) node[left]{$2$};
+
+	\end{tikzpicture}
+	\caption{Aspect de la corde à $t_1$.}
+	\label{fig:exII}
+\end{figure}
 \end{document}

@@ -4,7 +4,11 @@
 \usepackage{fancyhdr, mhchem, siunitx, amsmath, amssymb, amsfonts, tikz, amsthm, tkz-tab}
 \usepackage{tikz-3dplot, pgfplots}
 \usepackage{enumitem, caption}
+\usepackage{pgfornament,tikzrput}         % altermundus.com/pages/tkz/tikzrput/
+\usetikzlibrary{decorations,decorations.text} 
 %\usepackage[margin=4cm]{geometry}
+\usepackage[symbol]{footmisc} 
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\today}
@@ -39,7 +43,7 @@ Un élève désire montrer expérimentalement que le couple acide méthanoïque,
 	\item Au cours d'une troisième expérience l'élève étudie l'influence de la dilution sur la valeur du taux d'avancement final de la réaction de dissociation de l'ion méthanoate dans l'eau. Il trouve la courbe suivante.
 		\begin{enumerate}[label=(\alph*)]
 			\item Etablir en fonction de $C$ et $\tau_f$ l'expression du $Ka$ du couple $\ce{(HCOOH,HCOO^-)}$.
-			\item Déduire de cette expression et de la courbe  $\tau_f^2=f(\frac{1}{C}$ la valeur du $pKa$ du couple considéré.
+			\item Déduire de cette expression et de la courbe  $\tau_f^2=f(\frac{1}{C})$ la valeur du $pKa$ du couple considéré.
 		\end{enumerate}
 	\end{minipage}%
 	\begin{minipage}{0.5\textwidth}
