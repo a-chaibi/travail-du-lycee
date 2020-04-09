@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{program} \PYG{n}{CRYPT}\PYG{o}{;}
+\PYG{k}{var}
+\PYG{n}{ch}\PYG{o}{,}\PYG{n}{aux}\PYG{o}{:}\PYG{k}{string}\PYG{o}{;}
+\PYG{k}{BEGIN}
+\PYG{n+nb}{writeln}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Entrer une chaîne de caractères: \PYGZsq{}}\PYG{p}{)}\PYG{o}{;}
+\PYG{n+nb}{readln}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{)}\PYG{o}{;}
+\PYG{n}{aux}\PYG{o}{:=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{long}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{)]}\PYG{o}{;}
+\PYG{n}{ch}\PYG{p}{[}\PYG{n}{long}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{)]}\PYG{o}{:=}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{;}
+\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{:=}\PYG{n}{x}\PYG{o}{;}
+\PYG{n+nb}{writeln}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Voilà la chaîne cryptée: \PYGZsq{}}\PYG{o}{,} \PYG{n}{ch}\PYG{p}{)}\PYG{o}{;}
+\PYG{k}{END}\PYG{o}{.}
+\end{Verbatim}

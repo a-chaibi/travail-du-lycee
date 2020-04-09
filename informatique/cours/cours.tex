@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage{tabularx, minted, algorithm, algpseudocode}
+\title{Théorie informatique}
+\author{Ahmed Chaïbi}
+\begin{document}
+\maketitle
+\subsubsection*{Exemple élémentaire}
+Effectuer une analyse, un algorithme est une traduction pascal du programme intitulé CRYPT qui réalise le cryptage d'un mot donné en permutant le premiers caractère avec le dernier.
+  \vspace{0.3cm}
+  \hrule
+  \vspace{0.3cm}
+On commence par l'analyse:
+  \vspace{0.3cm}
+  \hrule
+  \vspace{0.3cm}
+  \begin{algorithmic}[1]
+\setcounter{ALG@line}{-1}
+\State  Nom=CRYPT
+\setcounter{ALG@line}{4}
+\State 	Résultat=Ecrire(ch)
+\setcounter{ALG@line}{3}
+\State	ch[1] $\leftarrow$ aux
+\setcounter{ALG@line}{2}
+\State	ch[long(ch)] $\leftarrow$ ch[1]
+\setcounter{ALG@line}{1}
+\State	aux $\leftarrow$ ch[long(ch)]
+\setcounter{ALG@line}{0}
+\State  ch=Donnée("Ecrire une chaîne de caractères: ")
+\setcounter{ALG@line}{5}
+\State	Fin CRYPT
+  \end{algorithmic}
+  \vspace{0.3cm}
+  \hrule
+  \vspace{0.3cm}
+
+
+
+Ensuite, l'algorithme
+  \vspace{0.3cm}
+  \hrule
+  \vspace{0.3cm}
+  \begin{minipage}{0.32\textwidth}
+  \begin{algorithmic}[1]
+\setcounter{ALG@line}{-1}
+\Statex  Début CRYPT
+\State	Lire(ch)
+\State	aux $\leftarrow$ ch[long(ch)]
+\State	ch[long(ch)] $\leftarrow$ ch[1]
+\State	ch[1] $\leftarrow$ aux
+\State  Ecrire(ch)
+\State	Fin CRYPT
+  \end{algorithmic}
+   \end{minipage}%
+   \begin{minipage}{0.68\textwidth}
+	   \begin{tabular}{|c|m{1.8cm}|m{3.25cm}|}
+		   \hline
+\multicolumn{3}{|c|}{Tableau de déclaration des objets} \\
+\hline
+Objet & Type & Rôle \\
+\hline\hline
+ch & Chaîne de caractères & La chaîne à crypter \\
+\hline
+aux & Chaîne de caractères & Sert à sauvegarder le premier caractère de ch\\
+\hline
+\end{tabular}
+   \end{minipage}
+  \vspace{0.3cm}
+  \hrule
+  \vspace{0.3cm}
+
+
+
+
+
+Et, enfin, la traduction Pascal.
+  \vspace{0.3cm}
+  \hrule
+  \vspace{0.3cm}
+\begin{minted}{pascal}
+program CRYPT;
+var
+ch,aux:string;
+BEGIN
+writeln('Entrer une chaîne de caractères: ');
+readln(ch);
+aux:=ch[long(ch)];
+ch[long(ch)]:=ch[1];
+ch[1]:=x;
+writeln('Voilà la chaîne cryptée: ', ch);
+END.
+\end{minted}
+  \vspace{0.3cm}
+  \hrule
+  \vspace{0.3cm}
+
+Définissez des constantes au début du programme c'est plus élégant.
+
+\begin{tabular}{|c|}
+	\hline
+	Tableau de déclaration des nouveau types\\
+	\hline\hline
+	Eleves = tableau de 30 chaînes de caractères\\
+	\hline
+	Moyenne = tableau de 30 réels\\
+	\hline
+\end{tabular}
+
+
+Le type scalaire par énumération défini un ensemble ordonné et fini de valeurs désignées par identificateur.
+\end{document}
