@@ -1,0 +1,4 @@
+program problemD;
+
+BEGIN
+END.
